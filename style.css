@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --branco: #fff;
+    --azulBebe: #acc9e1;
+    --azulEscuro: #5a88b9;
+    --beje: #e4dad3;
+}
+
+body{
+    background-color: var(--azulBebe);
+}
+
+header{
+    width: 100%;
+}
+
+header>div.container-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e4dad3;
+}
+.container-flex{
+    width: 85%;
+    max-width: 1440px;
+}
