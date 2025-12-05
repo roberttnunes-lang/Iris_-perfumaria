@@ -9,11 +9,11 @@
     --branco: #fff;
     --azulBebe: #acc9e1;
     --azulEscuro: #5a88b9;
-    --beje: #e4dad3;
+    --bege: #e4dad3;
 }
 
 body{
-    background-color: var(--azulBebe);
+    background-color: var(--branco);
 }
 
 header{
@@ -24,9 +24,38 @@ header>div.container-flex{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e4dad3;
+    height: 165px;
+    background-color: #fff;
 }
 .container-flex{
     width: 85%;
     max-width: 1440px;
+    margin: 0 auto;
+}
+
+#logo{
+    width: 155px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.links a{
+    font-size: 25px;
+    color: var(--Preto--);
+    text-decoration: none;
+}
+
+.links a:hover{
+    color: var(--azulEscuro);
+    border-bottom: 1px solid var(--azulEscuro);
+}
+
+#icone-barras,
+#icone-x,
+#menu_botao{
+    display: none;
 }
