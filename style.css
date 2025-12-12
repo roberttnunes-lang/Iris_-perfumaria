@@ -1,61 +1,713 @@
-*{
-    padding: 0;
+/* RESET */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
 
-:root{
-    --branco: #fff;
-    --azulBebe: #acc9e1;
-    --azulEscuro: #5a88b9;
-    --bege: #e4dad3;
+body {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: var(--branco);
-}
-
-header{
+/* HEADER */
+header {
     width: 100%;
+    background: #0f0f0f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    color: white;
 }
 
-header>div.container-flex{
+.logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 165px;
-    background-color: #fff;
+    gap: 10px;
 }
-.container-flex{
-    width: 85%;
-    max-width: 1440px;
+
+.logo img {
+    height: 155px;
+}
+
+.search input {
+    width: 380px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+nav a {
+    color: white;
+    margin-left: 35px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* BANNER */
+.banner {
+    width: 95%;
+    margin: 50px auto;
+    background: #000;
+    border-radius: 40px;
+    padding: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+.banner-texto h1 {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 25px;
+}
+
+.banner-texto p {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.banner-img img {
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+}
+
+
+/* SOBRE */
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    gap: 80px;
+}
+
+.container-grid {
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto {
+    max-width: 600px;
+}
+
+.texto h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background: #000;
+    color: white;
+    display: inline-block;
+    padding: 6px 25px;
+    border-radius: 6px;
+}
+
+.texto p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #000;
+}
+
+
+/* PARALLAX */
+.parallax {
+    height: 60vh;
+    background-image: url("./img/64214b61f2c102dca559a71698691ddb.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* PRODUTOS */
+.produtos {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 26px;
+    background: #000;
+    color: #fff;
+    padding: 8px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 auto 50px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0;
+}
+
+.item.invertido {
+    flex-direction: row-reverse;
+}
+
+.intro {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+button {
+    background: #d9d9d9;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.foto {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px #bfbfbf;
+}
+
+.final {
+    width: 70%;
+    margin: 80px auto 30px;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+a {
+    text-decoration: none;
+    color: #1a53c6;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #186be0;
+}
+
+
+
+
+.body {
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.card {
+    width: 90%;
+    max-width: 1200px;
+    background: #000;
+    color: white;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Formulário */
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.form textarea {
+    height: 180px;
+    resize: none;
+}
+
+/* Mapa */
+.map-area {
+    width: 50%;
+    text-align: center;
+}
+
+.map-area iframe {
+    width: 100%;
+    height: 260px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Redes sociais */
+.social {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.social i {
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social i:hover {
+    transform: scale(1.2);
+}
+
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0 0;
+}
+
+.footer-links a {
+    color: var(--footer-link);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--footer-link-hover);
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid var(--footer-border);
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: var(--footer-text);
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+    background: #fff;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: #0077ff;
+}
+
+.form textarea {
+    height: 130px;
+    resize: none;
+}
+
+/* Botão Enviar */
+.btn-enviar {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #0077ff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background: #005fcc;
+}
+
+/* ===========================
+          MAPA
+=========================== */
+.map-area iframe {
+    width: 350px;
+    height: 280px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* ===========================
+      REDES SOCIAIS
+=========================== */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0077ff;
+}
+
+/* Ícones */
+.footer-links i {
+    font-size: 20px;
+}
+
+
+.card{
+justify-content: center;
+
+
+}
+
+
+
+.btn {
+    background-color: var(--button-bg);
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* Títulos das seções com cor forte */
+.beneficios h2,
+.contato h2,
+.quadro-verde h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--section-title);
+}
+
+
+
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-overlay {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-#logo{
-    width: 155px;
-}
-
-.links{
+.footer-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 20px;
 }
 
-.links a{
-    font-size: 25px;
-    color: var(--Preto--);
+.footer-content img {
+    max-width: 140px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.footer-content p {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--footer-text);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0 0;
+}
+
+.footer-links a {
+    color: var(--footer-link);
     text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.links a:hover{
-    color: var(--azulEscuro);
-    border-bottom: 1px solid var(--azulEscuro);
+.footer-links a:hover {
+    color: var(--footer-link-hover);
 }
 
-#icone-barras,
-#icone-x,
-#menu_botao{
-    display: none;
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid var(--footer-border);
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: var(--footer-text);
+}
+
+/* Responsivo para telas maiores */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+
+/* Variáveis de Cores e Fontes */
+:root {
+    --card-bg: #000000;
+    --input-bg: #ffffff;
+    --text-color: #ffffff;
+    --label-color: #ffffff;
+    --social-color: #ffffff;
+    --card-padding: 40px;
+    --font-primary: Arial, sans-serif; /* Ajuste se a fonte da imagem for serifada */
+}
+
+/* Estilo do Body (Para simular o ambiente preto da imagem) */
+.body {
+    background-color: #000000;
+    font-family: var(--font-primary);
+}
+
+/* Contêiner principal para centralizar e dar margem */
+.contact-section-container {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo do Card Principal (Fundo Preto com cantos arredondados) */
+.contact-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: var(--card-padding);
+    border-radius: 20px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05); /* Sutil sombra branca para contraste */
+}
+
+.contact-title {
+    font-size: 1.8em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.decorative-dots {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    line-height: 0.5;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
+
+/* Layout de Conteúdo (Formulário + Mapa) */
+.contact-content {
+    display: flex;
+    gap: 40px;
+}
+
+.form-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo dos Grupos de Formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: var(--label-color);
+    font-size: 1.6em; /* Tamanho da label */
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 10px; /* Levemente arredondado */
+    padding: 18px 20px; /* Preenchimento para deixar os campos grandes */
+    font-size: 1.2em;
+    color: #333;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3); /* Destaque branco sutil no foco */
+}
+
+.message-group textarea {
+    height: 200px; /* Altura maior para a área de mensagem */
+    resize: none;
+    padding: 20px;
+}
+
+
+/* Área do Mapa e Redes Sociais */
+.map-social-area {
+    width: 45%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px; /* Alinhamento visual */
+}
+
+.map-container {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.map-placeholder-img {
+    width: 100%;
+    height: 250px; /* Altura do mapa */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilo dos Ícones Sociais */
+.social-links {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.social-item img{
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.social-links a {
+    color: var(--social-color);
+    font-size: 1.8em; /* Tamanho dos ícones */
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade Básica */
+@media (max-width: 850px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .form-area {
+        order: 2; /* Formulário abaixo do mapa no mobile */
+    }
+
+    .map-social-area {
+        width: 100%;
+        order: 1; /* Mapa acima do formulário no mobile */
+    }
+
+    .form-group label {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-card {
+        padding: 25px;
+        border-radius: 15px;
+    }
+    .map-placeholder-img {
+        height: 180px;
+    }
 }

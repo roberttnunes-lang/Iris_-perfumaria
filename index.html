@@ -4,41 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iris</title>
-
-    <link rel="shortcut icon" href="./img/Group 1.svg" type="image/x-icon">
-
-    <link rel="stylesheet" href="./style.css">
-
-    <script src="./script.js" dever></script>
+    <title>Íris Perfumes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
-        <header>
-            <div class="container-flex">
-                <img id="logo" src="./img/Group 1.svg02.svg" alt="logo iris">
-                <nav id="menu" class="links">
-                    <a href="sobrenos">sobre nós</a>
-                    <a href="produto">produto</a>
-                    <a href="contato">contato</a>
-                </nav>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="./img/Group 1.svg" alt="Logo Íris Perfumes">
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Pesquisar">
+        </div>
+
+        <nav>
+            <a href="#sobree">Sobre nós</a>
+            <a href="#produtos">Produto</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <!-- Menu de Hamburguer -->
+        <button id="menu_botao" onclick="abreFechaMenu()">
+
+            <svg id="icone-barras" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                    d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+            </svg>
+
+            <svg id="icone-x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                    d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z" />
+            </svg>
+
+        </button>
+
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <div class="banner-texto">
+            <h1>A beleza da natureza<br>em cada fragrância</h1>
+            <p>Sinta o poder de uma fragrância marcante.<br>
+                A primeira impressão começa aqui.
+            </p>
+        </div>
+
+        <div class="banner-img">
+            <img src="./img/Rectangle 12 (1).svg" alt="">
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre"  class="sobre">
+        <div class="img-container">
+            <img src="./img/Ellipse 5.jpg" alt="Sobre Nós - Perfume Sustentável">
+        </div>
+
+        <div class="texto">
+            <h2>Sobre nós</h2>
+            <p>
+                A Sustentável transforma o cuidado pessoal em um gesto de amor ao planeta,
+                criando fragrâncias naturais com ingredientes éticos e de baixo impacto ambiental.
+                Seus frascos reutilizáveis e reciclados unem beleza e consciência.
+                Mais que perfume, é uma conexão com a natureza — aromas que respeitam a vida e
+                preservam recursos, porque sustentabilidade é a sua essência.
+            </p>
+        </div>
+    </section>
+
+    <!-- PARALLAX 1 -->
+    <section class="parallax"></section>
+
+    <!-- PRODUTOS -->
+    <section  id="produtos"  class="produtos">
+
+        <h2 class="titulo">Produtos</h2>
+
+        <div class="item">
+            <div class="info">
+                <h3>Impressão Natural</h3>
+                <p>A força da natureza em forma de fragrância</p>
+                <button>Comprar</button>
             </div>
+            <img src="./img/Rectangle 26.jpg" class="foto" alt="Perfume Impressão Natural">
+        </div>
 
-            <button id="menu_botao" type="button">
-                <svg id="icone-barras" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                    <path
-                        d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
-                </svg>
+        <div class="item invertido">
+            <img src="./img/Rectangle 27.jpg" class="foto" alt="Perfume Aroma Natural">
+            <div class="info">
+                <h3>Aroma Natural</h3>
+                <p>O perfume que desperta leveza, pureza e harmonia</p>
+                <button>Comprar</button>
+            </div>
+        </div>
 
-                <svg id="icone-x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                    <path
-                        d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z" />
-                </svg>
-            </button>
+        <div class="item">
+            <div class="info">
+                <h3>Eudora Natural</h3>
+                <p>Seu cheiro pode ser sua assinatura</p>
+                <button>Comprar</button>
+            </div>
+            <img src="./img/Rectangle 25.jpg" class="foto" alt="Perfume Eudora Natural">
+        </div>
 
-        </header>
-    </main>
+        <p class="final">
+            Acrescente um toque de natureza ao seu bem-estar diário com fragrâncias
+            feitas com responsabilidade e cuidado.
+        </p>
+
+    </section>
+
+    <!-- PARALLAX 2 -->
+    <section id="contato"  class="parallax"></section>
+
+    <div class="contact-section-container">
+        <div class="contact-card">
+            <h2 class="contact-title">Entre em contato com a gente</h2>
+            <span class="decorative-dots">...</span>
+
+            <div class="contact-content">
+                <div class="form-area">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="">
+                    </div>
+
+                    <div class="form-group message-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder=""></textarea>
+                    </div>
+
+                </div>
+
+                <div class="map-social-area">
+
+                    <div class="map-container">
+                        <img src="./img/Rectangle 51.svg" alt="Localização no mapa" class="map-placeholder-img">
+                    </div>
+
+                    <div class="social-links-list">
+
+                        <div class="social-item">
+                            <img src="./img/instagram.svg" class="icone" alt="Instagram">
+                            <span class="handle">@irisperfumania</span>
+                        </div>
+
+                        <div class="social-item">
+                            <img src="./img/tiktok.svg" class="icone" alt="TikTok">
+                            <span class="handle">@irisperfumania</span>
+                        </div>
+
+                        <div class="social-item">
+                            <img src="./img/facebook.svg" class="icone" alt="Facebook">
+                            <span class="handle">@irisperfumania</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
